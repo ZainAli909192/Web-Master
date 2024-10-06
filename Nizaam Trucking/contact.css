@@ -1,0 +1,212 @@
+
+.description-form form{
+    padding: 10px;
+    width: 100%; 
+
+}
+  
+@keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translate(100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+.description-form input{
+    padding: 10px;
+    display: block;
+    margin-bottom: 0.6rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    margin-top: 1rem; 
+    border: 1px solid var(--secondory-color); 
+font-size: 16px;
+border-radius: 3px;
+color: black;
+}
+  
+.description-form input[type="submit"]{
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+::placeholder{
+    color: black; 
+    font-size: 1rem;
+}
+
+
+.description-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgb(201, 197, 197);
+    width: 50%;
+    margin: 40px auto;
+    animation: slideRight 2s;
+    animation-timeline: view();
+  animation-range: entry 0% cover 60% ; 
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    width: 48%; /* Adjusts the width of the input fields */
+}
+
+.description-form p {
+    font-size: 18px;
+    margin-bottom: 20px;
+text-align: center;
+}
+
+textarea{
+    padding: 5px;
+}
+.description-form p.mesg {
+    color: #008000;
+    font-size: 25px;
+}
+
+.description-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}.error{
+color: red;
+    text-align: center;
+    animation: move 0.2s 2 ease-in-out; 
+}
+textarea{
+    resize: none;
+}
+@keyframes move {
+    from{
+        transform: translateX(40px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+.description-form label {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.description-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+
+/* Media Query for Tablets (width <= 768px) */
+@media screen and (max-width: 768px) {
+    .description-form {
+        width: 80%; /* Form width takes up more space */
+    }
+
+    .row {
+        flex-direction: column; /* Stack input fields vertically */
+    }
+
+    .form-group {
+        width: 100%; /* Full width for each input field */
+        margin-bottom: 10px;
+    }
+
+    .description-form input, .description-form label {
+        margin-left: 0; /* Align input and label to the left */
+    }
+
+    button {
+        width: 100%;
+    }
+}
+.icons img{
+    position: relative;
+    right: 1rem;
+    bottom: -1rem;
+    height: 40px; 
+    width: 40px; 
+}
+.icons a{
+    /* width: 30%; */
+    margin-left: 1rem; 
+    /* background-color: red; */
+}
+
+
+#contact{
+    border-top: 1px solid rgb(193, 204, 204);
+    display: flex;
+    padding: 10px;
+}
+iframe{
+    margin-left: 2rem;
+    width: 40vw; 
+    height: 50vh;
+    margin-top: 4rem;
+}
+
+
+
+
+
+
+
+/* Media Query for Mobile (width <= 480px) */
+@media screen and (max-width: 780px) {
+    .description-form {
+        width: 90%; /* Almost full width on small mobile screens */
+    }
+
+    .description-form p.mesg {
+        font-size: 14px; /* Slightly reduce font size */
+    }
+
+    .description-form p {
+        font-size: 16px; /* Reduce header font size */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px; /* Increase button padding for better touch experience */
+    }
+    #contact{
+        flex-direction: column-reverse;
+    }
+    #contact iframe{
+        margin-top: -0.1rem;
+        width: 70vw;
+        height: 30vh;
+        margin-left: 1rem;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+    }
+}

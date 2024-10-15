@@ -174,19 +174,3 @@ circleBtn.addEventListener('click', () => {
     previewimg.classList.toggle('circle');
     circle = !circle;
 });
-
-const bgChangerBtn = document.querySelector('.bg-changer');
-const bgColorInput = document.querySelector('.bg-color');
-const previewImg = document.querySelector('.preview-img img');
-
-bgChangerBtn.addEventListener('click', () => {
-  const selectedColor = bgColorInput.value;
-  previewImg.style.background = selectedColor;
-});
-
-bgColorInput.addEventListener('input', () => {
-  const selectedColor = bgColorInput.value;
-  previewImg.style.borderColor = selectedColor;
-  previewImg.style.border = "2px solid";
-});
-

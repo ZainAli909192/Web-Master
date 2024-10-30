@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+video{
+    height: 200px;
+    width: 200px;
+}
+.box{
+    /* display: flex;
+    dis */
+} 
+</style>
+<body> 
+    <div class="box">
+        
+        <video src=""></video>
+        <button>Capture</button>
+        <button class="download" onclick="downloadnow()">Download</button>
+        <canvas></canvas>
+        <img src="" style="display: none;" alt="">
+    </div>
+
+<script>
+
+let video=document.querySelector("video");
+let button=document.querySelector("button");
+let downloadbtn=document.querySelector(".download");
+let canvas=document.querySelector("canvas");
+let img=document.querySelector("img");
+
+async function startcam(){
+    const stream=await navigator.mediaDevices.getUserMedia({video:true});
+    video.srcObject=stream;
+    video.play();
+}
+// startcam();
+
+function downloadnow(){
+        const link=document.createElement("a");
+        link.download="img.png";
+        link.href=canvas.toDataURL();
+        link.click();
+    }
+    button.addEventListener("click",()=>{
+        canvas.width=video.videoWidth;
+        canvas.height=video.videoHeight;
+        canvas.width=200;
+        canvas.height=200;
+        const context=canvas.getContext('2d');
+        context.drawImage(video, 0,0, canvas.width, canvas.height);
+
+
+        // img.src=canvas.toDataURL("image/png");
+        // img.style.display="block"; 
+        
+        // advance 
+        // context.rotate(260,0);  
+        // context.filter = "grayScale(100%) invert(100%)  saturate(200%)";
+        // context.drawImage(video, 0,0, canvas.width, canvas.height);
+    })
+</script>
+</body>
+</html>

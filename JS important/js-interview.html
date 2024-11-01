@@ -10,7 +10,6 @@
 <script>
 
 
-// Initial load of table data
 // let obj={name:"Zain",age:2}
 // let obj2={city:"Lahore",number:232123}
 // console.warn(obj["name"]); 
@@ -20,19 +19,8 @@
 // console.warn(delete obj["name"]);
 // console.warn(delete obj);
 
-// how to merge 2 objects 
-// newobj={...obj , ...obj2};
-// newobj={obj , obj2};
-// console.warn(newobj);  
-
 // const res=false || {} || null;
 // console.log(res); // will show {}
-
-// let name="ali"
-// function n(){
-//     console.log(name);
-// }
-// n()
 
 // let set=new Set([1,1,3,2]); 
 // console.log(set.add(23));
@@ -40,15 +28,50 @@
 // console.log(set.delete(23));
 // console.warn(set)
 
+            // "find" will get first value only 
+// let result=users.find((item)=>{
+//        return item.age>20
+// }) 
+// console.warn(result);
 
-// var x=10;
-// function test(){
-//     x=1 ;
-// }   
-// console.warn(x) 
-// test()
+                // ***********************
+        // "findLast" will get last value only
+// let result=users.findLast((item)=>{
+//        return item.age>20
+// }) 
+// console.warn(result);
 
-    
+                // *******************
+
+        // map function: iterate for each element
+
+//let data=[2,3,4]
+// let result=data.map((item)=>item*2);
+// console.warn(result);
+
+        // *********************
+        
+        // ".filter" will get all values who pass test
+// let result=users.filter((item)=>{
+//        return item.age>20
+// }) 
+// for(let item of result){
+//         console.warn(item.id +": "+ item.name +": "+ item.age );
+// }
+                  // *********************
+        // "reduce" function: it reduces array to a single value  
+// let data=[2,3,4];
+// let result=data.reduce((item1,item2)=>{
+//         return item1+item2
+// })
+// console.warn(result);
+                // ****************
+        // array includes method to search in Array 
+// let data=[2,4,3];
+// let result=data.includes(2);
+// console.warn(result);
+
+
         // array find method 
 // let users=[
 //         { id:1 , name:"Zain", age:25 },

@@ -152,7 +152,33 @@
 // let result=data.map((item)=>item*2);
 // console.warn("Map result: ",result);
     
-        // rest/ spread operator 
+   // rest/ spread operator 
+// destructuring: unpacking array into variables 
+
+// let fruits=["Apple","Mango","Banana"];
+// let [fruit1,fruit2,fruit3]=fruits;  //destruct all
+// let [fruit1,,fruit3]=fruits; // skip element (skiping 2 here) 
+// let [fruit1,,fruit3, fruit4="unkown"]=fruits; // No value available at 4
+// let [fruit1, ...fruitx]=fruits; // Get 1 value in a variable and rest in a single variable
+// console.warn(fruit1);
+// console.warn(fruit2); 
+// console.warn(fruit3); 
+// console.warn(fruit4); 
+// console.warn("Fruit 1: ",fruit1); 
+// console.warn("Rest of the fruits: ",fruitx); 
+                // Destruct objects 
+// let user={
+//         name:"Zain",
+//         email:"zain@gmail.com",
+//         mobile:333223
+// }
+// let {name}=user ; // Object destruct on the basis of keys
+// let {...name}=user ;  // Desturct all values
+// let {name, ...email}=user ; // Destruct name in name, and rest all in email
+// let {name, ...n}=user ; // Destruct name in name, and rest all in 'n'
+// console.warn(email);
+// console.warn(n);
+
 // let data=[4,2,5];
 // function sum(...args){
 //     return args.length;

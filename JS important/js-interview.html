@@ -210,7 +210,48 @@
 // E.g:  API cal take time. but JS can't wait and complete the work 
 // E.g: SetTimeout between 2 Consoles 
 // To stop this behaviour, use "async" , "await"
-    
+
+    // -----------------   
+                  // Promises 
+        // what is promise? 
+// obj that returns value which you hope to receive in future but not now 
+
+                // why we need it?
+// JS not wait for things and jump to next. To handle this, we use this 
+// let data=1;
+// console.warn(data);
+// data =2
+// setTimeout(() => {
+//         console.warn("Time out function: ",data);
+// }, 1000);
+// data=3
+// console.warn(data);
+
+                // example of Promise
+// let data=new Promise((resolved, reject)=>{
+//         setTimeout(() => {
+//                 resolved("Promise resolved");
+//         }, 1500);
+// });
+// data.then((item)=>{
+//         console.warn(item);
+// })
+// console.warn("hello");
+
+                // rejecting promise
+// let data=new Promise((resolved, reject)=>{
+//         setTimeout(() => {
+//                 reject("Promise rejected");
+//         }, 1500);
+// });
+// data.then((item)=>{
+//         console.warn(item);
+// }).catch((error)=>{
+//         console.warn("Error: ",error);
+        
+// })
+// console.warn("hello");
+
     </script>
 </body>
 </html>

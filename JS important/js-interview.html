@@ -424,6 +424,29 @@
 // obj copy reference of other object and change reflect on both obj. 
 // but variables copy value of the other variable 
 
+    
+// solution of above is deep or shallow copy 
+                // ***********************
+        // shallow copy (copy by values using spread operator) 
+// let obj1={name:"zain"};
+// let obj2={...obj1}; 
+// obj2.name="Ali";
+// console.warn(obj1.name);
+// console.warn(obj2.name);
+
+// Deep copy 
+// shallow copy convert only 1 level objects. objects with in object will not 
+// let obj1={name:"zain" , address:{
+//                     city:"Lahore",
+//                     state:"Punjab"
+//                         }
+//         };  
+// let obj2=JSON.parse( JSON.stringify(obj1) ); 
+// obj2.address.city="Sialkot";
+// console.warn(obj1.address.city);
+// console.warn(obj2.address.city);
+
+
 </script>
 </body>
 </html>
